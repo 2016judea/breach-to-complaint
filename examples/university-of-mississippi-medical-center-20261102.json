@@ -52,48 +52,19 @@
   }
  },
  "triage": {
-  "score": 71,
-  "band": "file",
+  "score": 46,
+  "band": "watch",
   "reasons": [
    "data: medical, financial_account, name (+34/35)",
    "class size: not stated in any notice (+6/20 neutral)",
    "defendant: private, size unknown \u2014 check insurance/collectability (+6/15)",
    "California subclass with CCPA-qualifying data: statutory damages $100\u2013$750 per consumer per incident (Cal. Civ. Code \u00a7 1798.150) (+15/15)",
    "healthcare defendant: HIPAA standards support negligence per se (+5)",
-   "public 1 day(s) ago \u2014 race still open (+5/5)"
+   "public 1 day(s) ago \u2014 race still open (+5/5)",
+   "defendant name reads as a government body (\"University of Mississippi\"): Eleventh Amendment immunity bars most damages suits against a state arm in federal court, and state tort-claims acts add notice deadlines and damage caps \u2014 attorney to confirm the entity's status before drafting (-25; capped at watch)"
   ],
   "ccpa_eligible": true,
+  "public_entity_signal": "University of Mississippi",
   "race_status": "unchecked (no docket source configured)"
- },
- "draft": {
-  "statutes_cited": [
-   "28 U.S.C. \u00a7 1332(d)",
-   "15 U.S.C. \u00a7 45(a)",
-   "45 C.F.R. \u00a7 164.306",
-   "45 C.F.R. \u00a7 164.404",
-   "Cal. Civ. Code \u00a7 1798.81.5",
-   "Cal. Civ. Code \u00a7 1798.150",
-   "Cal. Civ. Code \u00a7 1798.82",
-   "Cal. Civ. Code \u00a7 1798.84",
-   "Cal. Bus. & Prof. Code \u00a7 17200"
-  ],
-  "gaps": [
-   "Named plaintiff(s): name, state of residence, the notice they received, their injuries and mitigation costs.",
-   "Venue and district: select the court; confirm Defendant's citizenship for CAFA minimal diversity.",
-   "Class size and amount in controversy: confirm > 100 members and > $5,000,000 before relying on CAFA.",
-   "Docket check: search PACER / CourtListener for existing suits against Defendant over this incident.",
-   "[state statutory counts: attorney to add] \u2014 other states"
-  ],
-  "allegation_count": 13,
-  "llm": {
-   "llm": true,
-   "model": "claude-opus-5-5",
-   "input_tokens": 6760,
-   "output_tokens": 2117,
-   "stop_reason": "end_turn",
-   "allegations_kept": 12,
-   "allegations_dropped": []
-  },
-  "citation_audit_unverified": []
  }
 }

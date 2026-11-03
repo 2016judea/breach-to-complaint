@@ -187,6 +187,26 @@ def _attack_vector(ns) -> str | None:
 
 # ------------------------------------------------------------- triage
 
+US_STATES = ("Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas|"
+             "Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|"
+             "New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|"
+             "Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming")
+PUBLIC_ENTITY = re.compile(
+    rf"\b(?:state of|commonwealth of|county of|city of|town of|village of|department of|office of the|[a-z]+ county\b|"
+    rf"state university|community college|school district|public schools|board of (?:regents|education)|"
+    rf"(?:university|college) of (?:{US_STATES})\b|(?:{US_STATES}) state\b)", re.I)
+PRIVATE_DESPITE_NAME = re.compile(r"university of (?:pennsylvania|rochester|chicago|southern california|notre dame|miami)", re.I)
+
+
+def public_entity_signal(name: str) -> str | None:
+    """A defendant whose name reads as a state or local government body. Not a ruling: sovereign immunity and
+    tort-claims-act notice rules vary by state and entity, so this only routes the incident to an attorney check."""
+    if not name or PRIVATE_DESPITE_NAME.search(name):
+        return None
+    m = PUBLIC_ENTITY.search(name)
+    return m.group(0) if m else None
+
+
 def triage(inc: dict, today: dt.date) -> dict:
     reasons: list[str] = []
     score = 0.0
@@ -246,6 +266,16 @@ def triage(inc: dict, today: dt.date) -> dict:
     elif age is not None:
         reasons.append(f"public {age} days ago — check dockets before drafting (+0/5)")
 
-    score = round(min(100.0, score))
+    gov = None if d["is_public"] else public_entity_signal(d["legal_name"])
+    if gov:
+        score -= 25
+        reasons.append(f"defendant name reads as a government body (\"{gov}\"): Eleventh Amendment immunity bars most damages suits "
+                       "against a state arm in federal court, and state tort-claims acts add notice deadlines and damage caps — "
+                       "attorney to confirm the entity's status before drafting (-25; capped at watch)")
+
+    score = round(max(0.0, min(100.0, score)))
     band = "file" if score >= 65 else "watch" if score >= 45 else "pass"
-    return {"score": score, "band": band, "reasons": reasons, "ccpa_eligible": ccpa, "race_status": "unchecked (no docket source configured)"}
+    if gov and band == "file":
+        band = "watch"
+    return {"score": score, "band": band, "reasons": reasons, "ccpa_eligible": ccpa, "public_entity_signal": gov,
+            "race_status": "unchecked (no docket source configured)"}
