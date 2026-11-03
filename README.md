@@ -68,7 +68,7 @@ PLAYWRIGHT_DIR=/path/to/node_modules node scripts/verify_statutes.mjs
 | incident | source | score | draft |
 |---|---|---|---|
 | DriveWealth, LLC (358,104 WA residents, SSNs) | WA AG | 74 | [`examples/drivewealth-20261013.complaint.md`](examples/drivewealth-20261013.complaint.md) |
-| University of Mississippi Medical Center | CA AG letter | 71 | [`examples/university-of-mississippi-medical-center-20261102.complaint.md`](examples/university-of-mississippi-medical-center-20261102.complaint.md) |
+| University of Mississippi Medical Center | CA AG letter | 46 (watch) | none: a state institution, so the government-defendant check drops it below the draft threshold |
 | EyeMed Vision Care, LLC | CA AG letter | 67 | [`examples/eyemed-vision-care-20261030.complaint.md`](examples/eyemed-vision-care-20261030.complaint.md) |
 | Park Dental Partners, Inc. (PARK) | SEC 8-K Item 1.05 | 52 | [`examples/park-dental-partners-20261013.complaint.md`](examples/park-dental-partners-20261013.complaint.md) |
 
