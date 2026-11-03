@@ -1,0 +1,87 @@
+{
+ "incident_id": "park-dental-partners-20261013",
+ "defendant": {
+  "legal_name": "Park Dental Partners, Inc.",
+  "is_public": true,
+  "cik": "2069604",
+  "ticker": "PARK",
+  "state_of_incorporation": "MN",
+  "principal_place_of_business_state": "MN",
+  "industry": "healthcare",
+  "prior_breaches": null,
+  "existing_suits": null
+ },
+ "notices": [
+  {
+   "source": "sec_8k",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2069604/000110465926115541/park-20261007x8k.htm",
+   "source_record_id": "0001104659-26-115541",
+   "published_at": "2026-10-13",
+   "filer_name": "Park Dental Partners, Inc.",
+   "sample_letter_url": null
+  }
+ ],
+ "first_public_at": "2026-10-13",
+ "breach_start": null,
+ "breach_end": null,
+ "discovered_at": null,
+ "days_to_notify": null,
+ "attack_vector": "unauthorized access",
+ "total_affected": null,
+ "affected_by_state": {},
+ "states_with_notice": [],
+ "data_elements": [
+  "medical",
+  "address"
+ ],
+ "data_element_evidence": {
+  "medical": {
+   "quote": "The Company has identified impacted patients whose protected health information was involved and is completing notifications pursuant to applicable state and federal law.",
+   "notice": 0
+  },
+  "address": {
+   "quote": "and the Company continues to focus on protecting the privacy of protected health information in its care and mitigating cybersecurity risk, maintaining safeguards designed to protect data, continuously reviewing and enhancing those protections to address evolving threats, and providing ongoing and regular cybersecurity awareness training and testing for all employees.",
+   "notice": 0
+  }
+ },
+ "triage": {
+  "score": 52,
+  "band": "watch",
+  "reasons": [
+   "data: medical, address (+26/35)",
+   "class size: not stated in any notice (+6/20 neutral)",
+   "defendant: SEC registrant PARK \u2014 collectable, quotable 8-K (+15/15)",
+   "healthcare defendant: HIPAA standards support negligence per se (+5)",
+   "public 21 days ago \u2014 check dockets before drafting (+0/5)"
+  ],
+  "ccpa_eligible": false,
+  "race_status": "unchecked (no docket source configured)"
+ },
+ "draft": {
+  "statutes_cited": [
+   "28 U.S.C. \u00a7 1332(d)",
+   "15 U.S.C. \u00a7 45(a)",
+   "45 C.F.R. \u00a7 164.306",
+   "45 C.F.R. \u00a7 164.404"
+  ],
+  "gaps": [
+   "Named plaintiff(s): name, state of residence, the notice they received, their injuries and mitigation costs.",
+   "Venue and district: select the court; confirm Defendant's citizenship for CAFA minimal diversity.",
+   "Class size and amount in controversy: confirm > 100 members and > $5,000,000 before relying on CAFA.",
+   "Docket check: search PACER / CourtListener for existing suits against Defendant over this incident.",
+   "[state statutory counts: attorney to add] \u2014 MN",
+   "[state statutory counts: attorney to add] \u2014 other states"
+  ],
+  "allegation_count": 12,
+  "llm": {
+   "llm": true,
+   "model": "claude-opus-5-5",
+   "input_tokens": 2038,
+   "output_tokens": 2316,
+   "stop_reason": "end_turn",
+   "allegations_kept": 11,
+   "allegations_dropped": []
+  },
+  "citation_audit_unverified": []
+ }
+}

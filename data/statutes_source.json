@@ -55,7 +55,8 @@
   "use": "state_count",
   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.150",
   "must_contain": [
-   "not less than one hundred dollars ($100) and not greater than seven hundred and fifty ($750) per consumer per incident"
+   "not less than one hundred dollars ($100) and not greater than seven hundred and fifty ($750) per consumer per incident",
+   "provides a business 30 days"
   ]
  },
  {
@@ -143,7 +144,8 @@
   "use": "state_count",
   "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.86.090",
   "must_contain": [
-   "Any person who is injured in his or her business or property by a violation of RCW 19.86.020"
+   "Any person who is injured in his or her business or property by a violation of RCW 19.86.020",
+   "not to exceed three times the actual damages"
   ]
  }
 ]

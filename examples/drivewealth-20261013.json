@@ -1,0 +1,102 @@
+{
+ "incident_id": "drivewealth-20261013",
+ "defendant": {
+  "legal_name": "DriveWealth, LLC",
+  "is_public": false,
+  "cik": null,
+  "ticker": null,
+  "state_of_incorporation": null,
+  "principal_place_of_business_state": null,
+  "industry": "finance",
+  "prior_breaches": null,
+  "existing_suits": null
+ },
+ "notices": [
+  {
+   "source": "wa_ag",
+   "source_url": "https://data.wa.gov/resource/sb4j-ca4h.json?id=25855",
+   "source_record_id": "25855",
+   "published_at": "2026-10-13",
+   "filer_name": "DriveWealth, LLC",
+   "sample_letter_url": null
+  }
+ ],
+ "first_public_at": "2026-10-13",
+ "breach_start": "2026-09-04",
+ "breach_end": "2026-09-05",
+ "discovered_at": "2026-09-04",
+ "days_to_notify": 39,
+ "attack_vector": "unauthorized access",
+ "total_affected": null,
+ "affected_by_state": {
+  "WA": 358104
+ },
+ "states_with_notice": [
+  "WA"
+ ],
+ "data_elements": [
+  "ssn",
+  "financial_account",
+  "dob",
+  "name"
+ ],
+ "data_element_evidence": {
+  "ssn": {
+   "quote": "Information exposed: Financial & Banking Information, Full Date of Birth, Name, Social Security Number",
+   "notice": 0
+  },
+  "financial_account": {
+   "quote": "Information exposed: Financial & Banking Information, Full Date of Birth, Name, Social Security Number",
+   "notice": 0
+  },
+  "dob": {
+   "quote": "Information exposed: Financial & Banking Information, Full Date of Birth, Name, Social Security Number",
+   "notice": 0
+  },
+  "name": {
+   "quote": "Information exposed: Financial & Banking Information, Full Date of Birth, Name, Social Security Number",
+   "notice": 0
+  }
+ },
+ "triage": {
+  "score": 74,
+  "band": "file",
+  "reasons": [
+   "data: ssn, financial_account, dob, name (+35/35)",
+   "class size: 358,104 known (+19/20)",
+   "defendant: private, but a breach this size implies an enterprise (+10/15)",
+   "notice delay: 39 days elapsed before notification (+10/10)",
+   "public 21 days ago \u2014 check dockets before drafting (+0/5)"
+  ],
+  "ccpa_eligible": false,
+  "race_status": "unchecked (no docket source configured)"
+ },
+ "draft": {
+  "statutes_cited": [
+   "28 U.S.C. \u00a7 1332(d)",
+   "15 U.S.C. \u00a7 45(a)",
+   "RCW 19.255.010",
+   "RCW 19.255.040",
+   "RCW 19.86.020",
+   "RCW 19.86.090"
+  ],
+  "gaps": [
+   "Named plaintiff(s): name, state of residence, the notice they received, their injuries and mitigation costs.",
+   "Venue and district: select the court; confirm Defendant's citizenship for CAFA minimal diversity.",
+   "Class size and amount in controversy: confirm > 100 members and > $5,000,000 before relying on CAFA.",
+   "Docket check: search PACER / CourtListener for existing suits against Defendant over this incident.",
+   "[state statutory counts: attorney to add] \u2014 other states"
+  ],
+  "allegation_count": 12,
+  "llm": {
+   "llm": true,
+   "model": "claude-opus-5-5",
+   "input_tokens": 989,
+   "output_tokens": 1568,
+   "stop_reason": "end_turn",
+   "allegations_kept": 8,
+   "allegations_dropped": []
+  },
+  "citation_audit_unverified": []
+ }
+}
