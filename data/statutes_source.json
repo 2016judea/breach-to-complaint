@@ -1,0 +1,149 @@
+[
+ {
+  "id": "US-CAFA",
+  "cite": "28 U.S.C. § 1332(d)",
+  "title": "Class Action Fairness Act — original jurisdiction",
+  "jurisdiction": "US",
+  "use": "jurisdiction",
+  "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title28/html/USCODE-2023-title28-partIV-chap85-sec1332.htm",
+  "must_contain": [
+   "exceeds the sum or value of $5,000,000"
+  ]
+ },
+ {
+  "id": "US-FTC-5",
+  "cite": "15 U.S.C. § 45(a)",
+  "title": "FTC Act § 5 — unfair or deceptive acts or practices",
+  "jurisdiction": "US",
+  "use": "negligence_per_se",
+  "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap2-subchapI-sec45.htm",
+  "must_contain": [
+   "unfair or deceptive acts or practices in or affecting commerce, are hereby declared unlawful"
+  ]
+ },
+ {
+  "id": "US-HIPAA-164.306",
+  "cite": "45 C.F.R. § 164.306",
+  "title": "HIPAA Security Rule — general requirements",
+  "jurisdiction": "US",
+  "use": "negligence_per_se",
+  "industry": "healthcare",
+  "url": "https://www.ecfr.gov/api/versioner/v1/full/{ecfr_date}/title-45.xml?part=164&section=164.306",
+  "human_url": "https://www.ecfr.gov/current/title-45/section-164.306",
+  "must_contain": [
+   "Ensure the confidentiality, integrity, and availability of all electronic protected health information"
+  ]
+ },
+ {
+  "id": "US-HIPAA-164.404",
+  "cite": "45 C.F.R. § 164.404",
+  "title": "HIPAA Breach Notification Rule — notice to individuals",
+  "jurisdiction": "US",
+  "use": "negligence_per_se",
+  "industry": "healthcare",
+  "url": "https://www.ecfr.gov/api/versioner/v1/full/{ecfr_date}/title-45.xml?part=164&section=164.404",
+  "human_url": "https://www.ecfr.gov/current/title-45/section-164.404",
+  "must_contain": [
+   "without unreasonable delay and in no case later than 60 calendar days after discovery of a breach"
+  ]
+ },
+ {
+  "id": "CA-CIV-1798.150",
+  "cite": "Cal. Civ. Code § 1798.150",
+  "title": "California Consumer Privacy Act — private right of action for data breaches",
+  "jurisdiction": "CA",
+  "use": "state_count",
+  "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.150",
+  "must_contain": [
+   "not less than one hundred dollars ($100) and not greater than seven hundred and fifty ($750) per consumer per incident"
+  ]
+ },
+ {
+  "id": "CA-CIV-1798.81.5",
+  "cite": "Cal. Civ. Code § 1798.81.5",
+  "title": "California — duty to maintain reasonable security procedures",
+  "jurisdiction": "CA",
+  "use": "state_count",
+  "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.81.5",
+  "must_contain": [
+   "implement and maintain reasonable security procedures and practices"
+  ]
+ },
+ {
+  "id": "CA-CIV-1798.82",
+  "cite": "Cal. Civ. Code § 1798.82",
+  "title": "California Customer Records Act — breach notification",
+  "jurisdiction": "CA",
+  "use": "state_count",
+  "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.82",
+  "must_contain": [
+   "shall be made within 30 calendar days of discovery or notification of the data breach"
+  ]
+ },
+ {
+  "id": "CA-CIV-1798.84",
+  "cite": "Cal. Civ. Code § 1798.84",
+  "title": "California Customer Records Act — civil remedies",
+  "jurisdiction": "CA",
+  "use": "state_count",
+  "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.84",
+  "must_contain": [
+   "Any customer injured by a violation of this title may institute a civil action to recover damages"
+  ]
+ },
+ {
+  "id": "CA-BPC-17200",
+  "cite": "Cal. Bus. & Prof. Code § 17200",
+  "title": "California Unfair Competition Law",
+  "jurisdiction": "CA",
+  "use": "state_count",
+  "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=17200",
+  "must_contain": [
+   "any unlawful, unfair or fraudulent business act or practice"
+  ]
+ },
+ {
+  "id": "WA-RCW-19.255.010",
+  "cite": "RCW 19.255.010",
+  "title": "Washington — breach notification by persons and businesses",
+  "jurisdiction": "WA",
+  "use": "state_count",
+  "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.255.010",
+  "must_contain": [
+   "shall disclose any breach of the security of the system"
+  ]
+ },
+ {
+  "id": "WA-RCW-19.255.040",
+  "cite": "RCW 19.255.040",
+  "title": "Washington — breach notification violations enforceable under the Consumer Protection Act",
+  "jurisdiction": "WA",
+  "use": "state_count",
+  "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.255.040",
+  "must_contain": [
+   "unfair or deceptive act in trade or commerce"
+  ]
+ },
+ {
+  "id": "WA-RCW-19.86.020",
+  "cite": "RCW 19.86.020",
+  "title": "Washington Consumer Protection Act — unfair practices unlawful",
+  "jurisdiction": "WA",
+  "use": "state_count",
+  "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.86.020",
+  "must_contain": [
+   "unfair or deceptive acts or practices in the conduct of any trade or commerce are hereby declared unlawful"
+  ]
+ },
+ {
+  "id": "WA-RCW-19.86.090",
+  "cite": "RCW 19.86.090",
+  "title": "Washington Consumer Protection Act — private civil action, treble damages",
+  "jurisdiction": "WA",
+  "use": "state_count",
+  "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.86.090",
+  "must_contain": [
+   "Any person who is injured in his or her business or property by a violation of RCW 19.86.020"
+  ]
+ }
+]

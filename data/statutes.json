@@ -1,0 +1,152 @@
+{
+ "verified_on": "2026-11-03",
+ "method": "scripts/verify_statutes.mjs",
+ "statutes": [
+  {
+   "id": "US-CAFA",
+   "cite": "28 U.S.C. § 1332(d)",
+   "title": "Class Action Fairness Act — original jurisdiction",
+   "jurisdiction": "US",
+   "use": "jurisdiction",
+   "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title28/html/USCODE-2023-title28-partIV-chap85-sec1332.htm",
+   "verified_on": "2026-11-03",
+   "verified_quote": "ve original jurisdiction of any civil action in which the matter in controversy exceeds the sum or value of $5,000,000, exclusive of interest and costs, and is a class action in which— (A) any member of a class of plaintiffs is a citizen",
+   "page_sha256": "2e04b3e6e94fce276d8af2bb5c65fe827a3fa4b07ec7b319bf14d7cd087a19e2"
+  },
+  {
+   "id": "US-FTC-5",
+   "cite": "15 U.S.C. § 45(a)",
+   "title": "FTC Act § 5 — unfair or deceptive acts or practices",
+   "jurisdiction": "US",
+   "use": "negligence_per_se",
+   "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap2-subchapI-sec45.htm",
+   "verified_on": "2026-11-03",
+   "verified_quote": "o foreign trade (1) Unfair methods of competition in or affecting commerce, and unfair or deceptive acts or practices in or affecting commerce, are hereby declared unlawful. (2) The Commission is hereby empowered and directed to prevent persons, partnerships, or corporations, except banks, s",
+   "page_sha256": "2bcfeab61811e730ddbb9afa8adf7cb7df9e0d84cefaccd389a046dd80b58667"
+  },
+  {
+   "id": "US-HIPAA-164.306",
+   "cite": "45 C.F.R. § 164.306",
+   "title": "HIPAA Security Rule — general requirements",
+   "jurisdiction": "US",
+   "use": "negligence_per_se",
+   "industry": "healthcare",
+   "url": "https://www.ecfr.gov/current/title-45/section-164.306",
+   "verified_on": "2026-11-03",
+   "verified_quote": "quirements. Covered entities and business associates must do the following: (1) Ensure the confidentiality, integrity, and availability of all electronic protected health information the covered entity or business associate creates, receives, maintains, or transmits. (2) Protect against any reasonably",
+   "page_sha256": "f489eb0d6ad575cefb9a0b14bf0ee86b326b20d3ed0475ac71d39ced779d4764"
+  },
+  {
+   "id": "US-HIPAA-164.404",
+   "cite": "45 C.F.R. § 164.404",
+   "title": "HIPAA Breach Notification Rule — notice to individuals",
+   "jurisdiction": "US",
+   "use": "negligence_per_se",
+   "industry": "healthcare",
+   "url": "https://www.ecfr.gov/current/title-45/section-164.404",
+   "verified_on": "2026-11-03",
+   "verified_quote": "entity shall provide the notification required by paragraph (a) of this section without unreasonable delay and in no case later than 60 calendar days after discovery of a breach. (c) Implementation specifications: Content of notification —(1) Elements. The notification required by paragraph (a) o",
+   "page_sha256": "71f1ba7f76a2f97a31e729bebaba583ed0bc2ae8853fda1f72fc729a870182c0"
+  },
+  {
+   "id": "CA-CIV-1798.150",
+   "cite": "Cal. Civ. Code § 1798.150",
+   "title": "California Consumer Privacy Act — private right of action for data breaches",
+   "jurisdiction": "CA",
+   "use": "state_count",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.150",
+   "verified_on": "2026-11-03",
+   "verified_quote": "te a civil action for any of the following: (A) To recover damages in an amount not less than one hundred dollars ($100) and not greater than seven hundred and fifty ($750) per consumer per incident or actual damages, whichever is greater. The amounts in this subdivision shall be adjusted pursuant to subdivision (d)",
+   "page_sha256": "55bbd904243262a79d7af656fb1f2b70a410296acefce87dfc779a98dc5d1806"
+  },
+  {
+   "id": "CA-CIV-1798.81.5",
+   "cite": "Cal. Civ. Code § 1798.81.5",
+   "title": "California — duty to maintain reasonable security procedures",
+   "jurisdiction": "CA",
+   "use": "state_count",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.81.5",
+   "verified_on": "2026-11-03",
+   "verified_quote": ", licenses, or maintains personal information about a California resident shall implement and maintain reasonable security procedures and practices appropriate to the nature of the information, to protect the personal information from unauthorized access, destruction",
+   "page_sha256": "a0a6bfb4118035e8df57738adf97751b99b9bfc9031559a23ffd5281c8d48985"
+  },
+  {
+   "id": "CA-CIV-1798.82",
+   "cite": "Cal. Civ. Code § 1798.82",
+   "title": "California Customer Records Act — breach notification",
+   "jurisdiction": "CA",
+   "use": "state_count",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.82",
+   "verified_on": "2026-11-03",
+   "verified_quote": "2) (A) Subject to subparagraph (B), the disclosure required by this subdivision shall be made within 30 calendar days of discovery or notification of the data breach. (B) An individual or business may delay the disclosure required by this subdivision to accommodate the legitimate need",
+   "page_sha256": "efb98ac555c3364e46131841e4304976aeaf9ecff8eaa1ad3200fa54a7409aaa"
+  },
+  {
+   "id": "CA-CIV-1798.84",
+   "cite": "Cal. Civ. Code § 1798.84",
+   "title": "California Customer Records Act — civil remedies",
+   "jurisdiction": "CA",
+   "use": "state_count",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.84",
+   "verified_on": "2026-11-03",
+   "verified_quote": "n of this title is contrary to public policy and is void and unenforceable. (b) Any customer injured by a violation of this title may institute a civil action to recover damages. (c) In addition, for a willful, intentional, or reckless violation of Section 1798.83, a customer may recover a civil",
+   "page_sha256": "f6ddc6725fc716db5b748b6425078fc2848d478a22d29ee79e3f72bfa613d432"
+  },
+  {
+   "id": "CA-BPC-17200",
+   "cite": "Cal. Bus. & Prof. Code § 17200",
+   "title": "California Unfair Competition Law",
+   "jurisdiction": "CA",
+   "use": "state_count",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=17200",
+   "verified_on": "2026-11-03",
+   "verified_quote": "99. ) 17200. As used in this chapter, unfair competition shall mean and include any unlawful, unfair or fraudulent business act or practice and unfair, deceptive, untrue or misleading advertising and any act prohibited by Chapter 1 (commencing with Section 17",
+   "page_sha256": "eefb61a36f133be62ba2d99d7f4c3a85ec006021effcd95364f08b8b0ab7004f"
+  },
+  {
+   "id": "WA-RCW-19.255.010",
+   "cite": "RCW 19.255.010",
+   "title": "Washington — breach notification by persons and businesses",
+   "jurisdiction": "WA",
+   "use": "state_count",
+   "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.255.010",
+   "verified_on": "2026-11-03",
+   "verified_quote": "in this state and that owns or licenses data that includes personal information shall disclose any breach of the security of the system to any resident of this state whose personal information was, or is reasonably believed to have been, acquired by an un",
+   "page_sha256": "d1cf1362e61bd64d406889252b3fc693fbe0b690680f37b35bdec5da02ede39b"
+  },
+  {
+   "id": "WA-RCW-19.255.040",
+   "cite": "RCW 19.255.040",
+   "title": "Washington — breach notification violations enforceable under the Consumer Protection Act",
+   "jurisdiction": "WA",
+   "use": "state_count",
+   "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.255.040",
+   "verified_on": "2026-11-03",
+   "verified_quote": "easonable in relation to the development and preservation of business and is an unfair or deceptive act in trade or commerce and an unfair method of competition for purposes of applying the consumer protection act, chapter 19.86 RCW. An action",
+   "page_sha256": "a44b3313cc009fa4d511c6a42f2c9c14d1e0d0e2c3deb2be4386b73e54e2fbd1"
+  },
+  {
+   "id": "WA-RCW-19.86.020",
+   "cite": "RCW 19.86.020",
+   "title": "Washington Consumer Protection Act — unfair practices unlawful",
+   "jurisdiction": "WA",
+   "use": "state_count",
+   "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.86.020",
+   "verified_on": "2026-11-03",
+   "verified_quote": "ir competition, practices, declared unlawful. Unfair methods of competition and unfair or deceptive acts or practices in the conduct of any trade or commerce are hereby declared unlawful. [ 1961 c 216 s 2.] Notes: Hearing instrument dispensing, advertising, etc.—Application: RCW 18.35.180. Legislative que",
+   "page_sha256": "412068b11dcb9193da675d468f31c97bb46e89a655acac9eed8ba34e33ea37d9"
+  },
+  {
+   "id": "WA-RCW-19.86.090",
+   "cite": "RCW 19.86.090",
+   "title": "Washington Consumer Protection Act — private civil action, treble damages",
+   "jurisdiction": "WA",
+   "use": "state_count",
+   "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.86.090",
+   "verified_on": "2026-11-03",
+   "verified_quote": "l action for damages—Treble damages authorized—Action by governmental entities. Any person who is injured in his or her business or property by a violation of RCW 19.86.020, 19.86.030, 19.86.040, 19.86.050, or 19.86.060, or any person so injured because he or she refuses to accede to a propo",
+   "page_sha256": "9bcb64a150ed743035433250546e45e9e1d98796bae773708fef843d41c5dc69"
+  }
+ ],
+ "failed": []
+}
