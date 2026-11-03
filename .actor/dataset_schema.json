@@ -1,0 +1,14 @@
+{
+  "actorSpecification": 1,
+  "views": {
+    "overview": {
+      "title": "Incidents by triage score",
+      "transformation": { "fields": ["triage.score", "triage.band", "defendant.legal_name", "first_public_at", "data_elements", "total_affected", "affected_by_state", "states_with_notice", "draft.markdown_url"] },
+      "display": { "component": "table", "properties": {
+        "triage.score": { "label": "Score", "format": "number" }, "triage.band": { "label": "Call" }, "defendant.legal_name": { "label": "Defendant" },
+        "first_public_at": { "label": "Public since", "format": "date" }, "data_elements": { "label": "Data exposed", "format": "array" },
+        "total_affected": { "label": "Affected", "format": "number" }, "affected_by_state": { "label": "By state", "format": "object" },
+        "states_with_notice": { "label": "AG notices", "format": "array" }, "draft.markdown_url": { "label": "Draft complaint", "format": "link" } } }
+    }
+  }
+}

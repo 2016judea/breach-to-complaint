@@ -1,0 +1,4 @@
+apify==4.2.0
+requests==2.34.2
+pypdf==6.21.4
+anthropic==2.4.0

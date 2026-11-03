@@ -90,4 +90,41 @@ edit and file. Each field names the question it answers for the firm.
 Filled = a source we can read today carries the field for a material share of
 records. See `scripts/` and `examples/` for the reads.
 
-REALITY_CHECK_PLACEHOLDER
+Sample: every notice published 2026-10-13 → 2026-11-03 across the three shipped
+sources, 15 incidents (CA AG 9, SEC 8-K 4, WA AG 2). Triage spread on that sample:
+18 → 74 (5 file, 7 watch, 3 pass), so the score separates incidents rather than
+stamping them all the same.
+
+| field | status | source / why not |
+|---|---|---|
+| Notice: source, url, record id, published_at, filer_name | **filled** | all three sources |
+| notice_text | **filled** | 8-K Item 1.05/8.01 body; CA AG sample letter PDF (pypdf); WA AG structured row rendered as text |
+| sample_letter_url | **filled for CA** | CA AG attaches the PDF; SEC and WA have none |
+| incident_id, notices[] | **filled** | name-normalised merge across sources in one run |
+| breach_start / breach_end | **filled 10 of 13 (first pass)** | CA list dates, WA fields; 8-Ks rarely state them |
+| discovered_at | **partial** | WA field; CA letters in prose (the model quotes it, not parsed into the field) |
+| notified_at / delay | **partial** | WA `dayselapsedbeforenotification`; CA/SEC only in prose |
+| attack_vector | **filled 9 of 13 (first pass)** | regex over notice text + WA cause field |
+| third_party_vendor | **partial** | only when the letter says "vendor" |
+| ransomware_group / leak_site_post | **NOT FILLED** | no leak-site source shipped; leak sites are criminal infrastructure and not something this actor should scrape |
+| total_affected | **NOT FILLED (0 of 15)** | none of the three sources states a national count. Maine AG and HHS OCR do: Maine's list was not probed; HHS OCR's portal returned 0 bytes to a scripted GET |
+| affected_by_state | **WA only** | WA AG gives the WA count; CA AG implies >500 CA residents but gives no number |
+| affected_minors | **NOT FILLED** | no source carries it |
+| data elements | **filled 12 of 13 (first 13-incident pass)** | WA structured field; CA letter "What information was involved" section; 8-Ks mostly silent |
+| encrypted | **NOT FILLED** | prose only; not parsed |
+| defendant legal_name | **filled** | |
+| state_of_incorporation / principal place | **public cos only** | SEC submissions JSON; WA `entitystate` sometimes |
+| is_public, cik, ticker | **filled** | SEC sources only; a CA/WA notice from a public company is not yet joined to EDGAR |
+| industry | **filled (heuristic)** | WA industry field, SEC SIC, name/text keywords |
+| prior_breaches | **NOT FILLED** | would need the AG lists' history per defendant; not built |
+| existing_suits / race_status | **NOT FILLED** | CourtListener API needs a token (401 keyless, HTML search 403); PACER is paid. Draft tells counsel to check dockets |
+| candidate claims + statute | **filled** | 13 sections verified against official pages 2026-11-03 (`data/statutes.json`); states other than CA and WA print `[state statutory counts: attorney to add]` |
+| triage score + reasons | **filled** | `src/incident.py` |
+| draft: markdown, allegations with quote+URL, statutes_cited, gaps | **filled** | `src/draft.py`; quotes checked verbatim, law-citing model text dropped |
+
+Call: **reframe, not abandon.** The model's core — notice → pinned facts → verified
+claims → draft — is fully fillable. The two fields that fail and matter most to a
+firm racing to file are `total_affected` (class size drives the fee) and
+`existing_suits` (are we first). Both have named sources (Maine AG / HHS OCR;
+CourtListener with a token), so they are the next slice, not a reason to stop. The
+draft and triage say plainly when they are missing rather than guessing.

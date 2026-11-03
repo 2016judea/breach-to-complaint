@@ -1,0 +1,10 @@
+{
+  "pricingModel": "PAY_PER_EVENT",
+  "pricingPerEvent": {
+    "actorChargeEvents": {
+      "incident":        { "eventTitle": "Incident record",       "eventDescription": "One normalized breach incident (defendant, dates, data elements, affected counts, source URLs).", "eventPriceUsd": 0.01 },
+      "triage":          { "eventTitle": "Triage score",          "eventDescription": "0-100 worth-filing score with one-line reasons for one incident.", "eventPriceUsd": 0.5 },
+      "complaint-draft": { "eventTitle": "Draft class-action complaint", "eventDescription": "Draft complaint (Markdown) with every fact pinned to a source quote and every statute from the verified table.", "eventPriceUsd": 19.0 }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "actorSpecification": 1,
+  "name": "breach-to-complaint",
+  "title": "Data Breach to Class Action Complaint Draft",
+  "description": "Within minutes of a data breach going public (SEC 8-K, California AG, Washington AG), get a normalized incident record, a triage score for plaintiff firms, and a draft class-action complaint with every fact pinned to the source notice and every statute verified against the official text. For licensed counsel only.",
+  "version": "0.1",
+  "buildTag": "latest",
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "storages": { "dataset": "./dataset_schema.json" },
+  "environmentVariables": { "ANTHROPIC_API_KEY": "@anthropicApiKey" }
+}
