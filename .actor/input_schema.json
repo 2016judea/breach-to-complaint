@@ -3,14 +3,78 @@
   "type": "object",
   "schemaVersion": 1,
   "properties": {
-    "sources": { "title": "Sources", "type": "array", "editor": "select", "description": "Where to read breach notices from.",
-      "items": { "type": "string", "enum": ["sec_8k", "ca_ag", "wa_ag"], "enumTitles": ["SEC 8-K (Item 1.05 / cybersecurity incident)", "California AG breach list + sample letters", "Washington AG breach notices (data.wa.gov)"] },
-      "default": ["sec_8k", "ca_ag", "wa_ag"], "prefill": ["sec_8k", "ca_ag", "wa_ag"] },
-    "lookbackDays": { "title": "Look back (days)", "type": "integer", "description": "Notices published in the last N days. Schedule the actor hourly with 1-2 days to catch breaches as they post.", "default": 3, "prefill": 3, "minimum": 1, "maximum": 90 },
-    "maxNoticesPerSource": { "title": "Max notices per source", "type": "integer", "default": 25, "minimum": 1, "maximum": 200 },
-    "onlyNames": { "title": "Only these defendants", "type": "array", "editor": "stringList", "description": "Optional. Restrict to organisations whose name contains one of these strings." },
-    "draftComplaints": { "title": "Draft complaints", "type": "boolean", "default": true, "description": "Draft a complaint for each incident scoring at or above the threshold. Charged per draft." },
-    "minScoreForDraft": { "title": "Minimum triage score to draft", "type": "integer", "default": 60, "minimum": 0, "maximum": 100 },
-    "anthropicApiKey": { "title": "Your Anthropic API key (optional)", "type": "string", "isSecret": true, "editor": "textfield", "description": "Leave empty to use ours (included in the draft price)." }
+    "sources": {
+      "title": "Sources",
+      "type": "array",
+      "editor": "select",
+      "description": "Where to read breach notices from.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "sec_8k",
+          "ca_ag",
+          "wa_ag"
+        ],
+        "enumTitles": [
+          "SEC 8-K (Item 1.05 / cybersecurity incident)",
+          "California AG breach list + sample letters",
+          "Washington AG breach notices (data.wa.gov)"
+        ]
+      },
+      "default": [
+        "sec_8k",
+        "ca_ag",
+        "wa_ag"
+      ],
+      "prefill": [
+        "sec_8k",
+        "ca_ag",
+        "wa_ag"
+      ]
+    },
+    "lookbackDays": {
+      "title": "Look back (days)",
+      "type": "integer",
+      "description": "Notices published in the last N days. Schedule the actor hourly with 1-2 days to catch breaches as they post.",
+      "default": 3,
+      "prefill": 3,
+      "minimum": 1,
+      "maximum": 90
+    },
+    "maxNoticesPerSource": {
+      "title": "Max notices per source",
+      "type": "integer",
+      "default": 25,
+      "minimum": 1,
+      "maximum": 200,
+      "description": "Most notices to read from each source per run. Keeps cost bounded on a long lookback."
+    },
+    "onlyNames": {
+      "title": "Only these defendants",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Optional. Restrict to organisations whose name contains one of these strings."
+    },
+    "draftComplaints": {
+      "title": "Draft complaints",
+      "type": "boolean",
+      "default": true,
+      "description": "Draft a complaint for each incident scoring at or above the threshold. Charged per draft."
+    },
+    "minScoreForDraft": {
+      "title": "Minimum triage score to draft",
+      "type": "integer",
+      "default": 60,
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Only incidents scoring at least this (0-100) get a complaint draft, the $19 event. Lower it to draft more, raise it to draft only the strongest."
+    },
+    "anthropicApiKey": {
+      "title": "Your Anthropic API key (optional)",
+      "type": "string",
+      "isSecret": true,
+      "editor": "textfield",
+      "description": "Leave empty to use ours (included in the draft price)."
+    }
   }
 }
