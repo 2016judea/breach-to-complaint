@@ -84,7 +84,7 @@ From `DATA_MODEL.md` (the model was written before looking at any source, then c
 
 - Pipeline, triage, drafting, the verified table and four real examples: done.
 - The actor runs locally under the Apify SDK with test pay-per-event charging. Events fire in order: incident, triage, complaint-draft.
-- **Not published.** Aidan's existing Apify account (Gmail) could not be reached headless: the copied Google and GitHub sessions don't carry over, and the password isn't on disk. A new sign-up stopped at a reCAPTCHA. To publish, put `APIFY_TOKEN=...` in `~/.config/breach-to-complaint/.env` and run `scripts/publish.sh`. The script is untested against a live account.
+- **Monetized 2026-11-03** on Apify (`cheerful_term/breach-to-complaint`): pay-per-event pricing above is live; the console shows Monetization: Active. The Actor is still **private**: `scripts/publish.sh` (token now in `~/.config/breach-to-complaint/.env`) makes it public in the Store.
 
 ## Licence
 
