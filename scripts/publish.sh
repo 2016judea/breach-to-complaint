@@ -21,12 +21,16 @@ python3 - "$ACT" "$APIFY_TOKEN" <<'PY'
 import json, sys, urllib.request
 act, token = sys.argv[1], sys.argv[2]
 ppe = json.load(open(".actor/pay_per_event.json"))
+cur = json.load(urllib.request.urlopen(f"https://api.apify.com/v2/acts/{act}?token={token}"))["data"]
 body = {
   "isPublic": True,
   "title": "Data Breach to Class Action Complaint Draft",
   "categories": ["LEAD_GENERATION", "AI"],
-  "pricingInfos": [ppe],
 }
+# Apify refuses frequent pricing edits; only send pricing when it changed.
+live = (cur.get("pricingInfos") or [{}])[-1].get("pricingPerEvent")
+if live != ppe["pricingPerEvent"]:
+    body["pricingInfos"] = [ppe]
 req = urllib.request.Request(f"https://api.apify.com/v2/acts/{act}?token={token}", data=json.dumps(body).encode(),
                              method="PUT", headers={"content-type": "application/json"})
 r = json.load(urllib.request.urlopen(req))["data"]

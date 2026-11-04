@@ -1,0 +1,11 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Data Breach to Class Action Complaint Draft: output",
+  "properties": {
+    "overview": {
+      "type": "string",
+      "title": "Incidents, triage and drafts",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+    }
+  }
+}
