@@ -7,7 +7,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 set -a; source ~/.config/breach-to-complaint/.env; set +a
 : "${APIFY_TOKEN:?add APIFY_TOKEN=apify_api_... to ~/.config/breach-to-complaint/.env}"
-ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY:-$(grep '^ANTHROPIC_API_KEY=' ~/Desktop/bricks/.env | cut -d= -f2- | tr -d '"')}"
+ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY:-$(grep '^ANTHROPIC_API_KEY=' ~/Desktop/workspace/bricks/.env | cut -d= -f2- | tr -d '"')}"
 CLI="npx -y apify-cli@1.10.0"
 
 $CLI login -t "$APIFY_TOKEN" >/dev/null

@@ -6,7 +6,7 @@
 // dropped from the table, and a draft that would have used it says
 // "[state statutory counts: attorney to add]" instead.
 //
-// Run: PLAYWRIGHT_DIR=~/Desktop/pricing-vintage-baseball-cards/node_modules node scripts/verify_statutes.mjs
+// Run: PLAYWRIGHT_DIR=~/Desktop/workspace/pricing-vintage-baseball-cards/node_modules node scripts/verify_statutes.mjs
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
